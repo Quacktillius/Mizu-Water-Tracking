@@ -10,6 +10,9 @@ const { json } = require('body-parser');
 const isAuth = require('./middleware/is-auth');
 const app = express();
 
+var cors = require("cors");
+app.use(cors());
+
 // <====Middleware====>
 app.use(bodyParser.json());
 
