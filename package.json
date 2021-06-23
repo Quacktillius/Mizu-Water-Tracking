@@ -1,0 +1,30 @@
+{
+  "name": "studentbase-newbie-test",
+  "version": "1.0.0",
+  "description": "If you ace this you pass the technical part of the process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsan8244/StudentBase-newbie-test.git"
+  },
+  "author": "Quacktillius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahsan8244/StudentBase-newbie-test/issues"
+  },
+  "homepage": "https://github.com/ahsan8244/StudentBase-newbie-test#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

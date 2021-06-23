@@ -1,0 +1,133 @@
+{
+  "example@gmail.com": {
+    "name": "User",
+    "email": "example@gmail.com",
+    "password": "example",
+    "bottles": [
+      {
+        "_id": "example@gmail.com12",
+        "volume": 12
+      },
+      {
+        "_id": "example@gmail.com16.9",
+        "volume": 16.9
+      },
+      {
+        "_id": "example@gmail.com26",
+        "volume": 26
+      }
+    ],
+    "drinks": [
+      {
+        "_id": "example@gmail.com_12_2021-06-22T20:04:37.348Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 12,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_12_2021-06-21T20:04:37.348Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 22
+        },
+        "volume": 26,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_12_2021-05-22T20:04:37.348Z",
+        "date": {
+          "year": 2021,
+          "month": 4,
+          "date": 23
+        },
+        "volume": 16.9,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_26_2021-06-22T20:28:22.091Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 26,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_26_2021-06-22T20:28:23.793Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 26,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_26_2021-06-22T20:28:25.768Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 26,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_26_2021-06-22T20:28:27.287Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 26,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_26_2021-06-22T20:28:28.726Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 26,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_12_2021-06-23T04:07:45.620Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 12,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_16.9_2021-06-23T04:07:58.775Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 16.9,
+        "user": "example@gmail.com"
+      },
+      {
+        "_id": "example@gmail.com_26_2021-06-23T04:09:39.832Z",
+        "date": {
+          "year": 2021,
+          "month": 5,
+          "date": 23
+        },
+        "volume": 26,
+        "user": "example@gmail.com"
+      }
+    ]
+  }
+}

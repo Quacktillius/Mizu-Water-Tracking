@@ -1,0 +1,146 @@
+:root {
+    --primary-color: rgba(0, 0, 0, 0.75);
+    --overlay-color: rgba(29, 39, 51, 0.9);
+    --menu-speed: 0.75s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: stretch;
+    position: relative;
+
+    flex-wrap: wrap;
+
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./images/mike-ko-tjod6u2RpiU-unsplash.jpg");
+    background-size: cover;
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(5px); */
+}
+
+.auth-login-form,
+.auth-register-form
+{
+    /* background-color: rgba(109, 109, 109, 0.493); */
+    /* background-image: url("./images/mike-ko-tjod6u2RpiU-unsplash.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    box-shadow: rgba(63, 63, 63, 0.822) -3px 3px 3px;
+    border-radius: 10px; */
+    border: none;
+    color: white;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.auth-login-form label {
+    font-size: clamp(1.5em, 3vw ,50px);
+    font-weight: lighter;
+}
+
+.auth-login-form input {
+    font-size: clamp(1em, 2vw , 30px);
+    font-weight: lighter;
+}
+
+.auth-form-input {
+    margin-bottom: 20px;
+}
+
+.auth-container button {
+    background-color: rgba(0, 197, 0, 0);
+    /* box-shadow: darkslategrey -1px 1px 2px; */
+    color: white;
+    font-size: clamp(1.5em, 3vw ,50px);
+    font-weight: lighter;
+    
+    border: 0;
+    /* border-radius: 10px; */
+    padding: 5px 10px;
+}
+
+.auth-container button:hover {
+    /* background-color: rgb(255, 153, 0); */
+    cursor:pointer;
+}
+
+.auth-cool-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-cool-button:hover .left-line,
+.auth-cool-button:hover .right-line {
+    width: 30px;
+    opacity: 1;
+}
+
+.auth-cool-button .left-line {
+    height: 2px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    background-color: white;
+}
+
+.auth-cool-button .right-line {
+    height: 2px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    background-color: white;
+}
+
+.or {
+    margin: 0;
+    padding: 0;
+}
+
+.auth-container h3 {
+    font-size: clamp(3em, 7vw ,70px);
+    /* text-align: center; */
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.about {
+    max-width: 50vw;
+}
+
+.stretch-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-div {
+    background-color: black;
+}
+
+@media screen and (max-width: 480px) {
+    .stretch-flex {
+        flex-grow: 1;
+    }
+
+    .about {
+        max-width: 90vw;
+    }
+}

@@ -1,0 +1,332 @@
+:root {
+    --primary-color: rgba(0, 0, 0, 0.75);
+    --overlay-color: rgba(29, 39, 51, 0.9);
+    --menu-speed: 0.75s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger Lines */
+.menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+} 
+
+.menu-wrap .hamburger > div:after {
+    top: 10px;
+}
+
+/* Animate Hamburger Lines to and from X */
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div::before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+/* Show menu */
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1; 
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    color: white;
+}
+
+.menu-wrap .menu > div > div h1 {
+    font-size: clamp(3em, 7vw ,70px);
+}
+
+.menu-wrap .menu > div > div .category {
+    font-size: clamp(1.5em, 3vw ,50px);
+    font-weight: lighter;
+}
+
+.menu-wrap .menu > div > div p {
+    font-size: clamp(1em, 2vw ,40px);
+    font-weight: lighter;
+}
+
+.menu-wrap .menu > div > div .water-info-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.home-container {
+    font-family: monospace;
+    line-height: 1.4;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    height: 100vh;
+    width: 100vw;
+
+    align-items: stretch;
+}
+
+.main-tracker {
+    flex-grow: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-bottle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: clamp(200px,30%,30%);
+
+    justify-content: space-between;
+}
+
+#water-goal {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(3em, 5vw ,50px);
+}
+
+#water-goal-message {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(1.5em, 1.5vw ,30px);
+    font-weight: lighter;
+}
+
+#drink-btn,
+#logout {
+    font-family: monospace;
+    font-size: clamp(2em, 2vw ,60px);
+    font-weight: bolder;
+
+    background-color: white;
+    border: none;
+    margin: 5vh;
+}
+
+#drink-btn:hover,
+#logout {
+    cursor: pointer;
+}
+
+#logout {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.select-bottle button {
+    border-radius: 30px;
+    font-size: 2em;
+    font-weight: bolder;
+
+    background-color: white;
+    border: none;
+}
+
+.select-bottle button:hover {
+    cursor: pointer;
+}
+
+.bottle-selector-display img {
+    width: 100%;
+    height: auto;
+}
+
+.volume {
+    font-weight: bolder;
+    font-family: monospace;
+    text-align: center;
+
+    font-size: clamp(1.5em, 1.5vw ,30px);
+}
+
+.bottle-selector-display {
+    position: relative;
+}
+
+.progressbar {
+    position: absolute;
+    z-index: -1;
+    bottom: 5px;
+    width: 100%;
+    max-height: 97%;
+    height: 0;
+    transition: height 1s;
+    background-color: rgb(0, 127, 211);
+}
+
+.sideview {
+    width: 20vw;
+    min-width: min-content;
+    background-color: darkslategrey;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+    .sideview {
+        
+    }
+}
+
+.sideview h2 {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.water-info {
+    margin: 40px;
+    text-align: center;
+    color: white;
+}
+
+.category,
+.data {
+    margin: 0;
+}
+
+/* Cool Button Effect */
+.cool-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cool-button:hover .left-line,
+.cool-button:hover .right-line {
+    width: 30%;
+    opacity: 1;
+}
+
+.left-line {
+    height: 2px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    background-color: white;
+}
+
+.right-line {
+    height: 2px;
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    background-color: white;
+}
