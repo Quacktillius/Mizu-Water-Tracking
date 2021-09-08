@@ -1,6 +1,16 @@
 # StudentBase Newbie Test
 If you ace this you pass the technical part of the process
 
+## Demo
+https://user-images.githubusercontent.com/59651293/132534298-86fd45da-066e-4846-8972-9b4eef940611.mp4
+
+## Images
+### Homepage
+<img width="960" alt="mizu home" src="https://user-images.githubusercontent.com/59651293/132534623-c95dd966-0181-4666-8547-ed8234f3ef78.PNG">
+
+### Water Tracking
+<img width="960" alt="mizu main" src="https://user-images.githubusercontent.com/59651293/132534710-6b134a94-0d12-4736-bc0f-7c765e546989.PNG">
+
 
 ## Overview
 So somehow, we have headhunted you to join our engineering team. The next step is to do well in this coding challenge. For this challenge, you will be making a web application that tracks daily water consumption (hydration is important). Users should be able to input each glass or bottle of water that they drink, and the app should tell the user how much more water they need to drink today. 
